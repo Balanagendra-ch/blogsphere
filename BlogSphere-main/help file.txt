@@ -1,0 +1,13 @@
+to run Django file
+
+open anaconda 
+ 
+
+activate major
+
+cd C:\Users\loder\Desktop\major\BloggerArticles\BloggerArticles
+
+
+python manage.py runserver
+
+url: http://127.0.0.1:8000/

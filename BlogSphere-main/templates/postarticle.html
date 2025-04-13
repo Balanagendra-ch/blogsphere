@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	{% include "header.html" %}
+</head>
+<body>
+	{% include "menu2.html" %}
+	<div class="register-form-main">
+		<div class="container">
+			<div class="title-div">
+				<h3 class="tittle">
+					<span>P</span>ost <span>A</span>rticle
+				</h3>
+			</div>
+			<div class="login-form">
+
+				<form name="form" action="/postarticleaction/" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+					<div class="">
+						<p>Title</p>
+						<input type="text" class="name" name="title" required="required"/>
+					</div>
+                    <div class="">
+						<p>Description</p>
+						<input type="text" class="name" name="description" required="required"/>
+					</div>
+					<div class="">
+						<p>Select Category</p>
+						<select name="category" required style="width: 580px;height: 45px;">
+							<option value="">--select--</option>
+							<option value="Technology & Science">Technology & Science</option>
+							<option value="Business & Finance">Business & Finance</option>
+							<option value="Health & Wellness">Health & Wellness</option>
+							<option value="Education & Learning">Education & Learning</option>
+							<option value="Lifestyle & Personal Development">Lifestyle & Personal Development</option>
+							<option value="Travel & Adventure">Travel & Adventure</option>
+							<option value="Food & Cooking">Food & Cooking</option>
+							<option value="Entertainment & Media">Entertainment & Media</option>
+							<option value="Gaming & Esports">Gaming & Esports</option>
+							<option value="Fashion & Beauty">Fashion & Beauty</option>
+							<option value="Automotive & Vehicles">Automotive & Vehicles</option>
+							<option value="Home & DIY">Home & DIY</option>
+							<option value="Society & Politics">Society & Politics</option>
+							<option value="Spirituality & Religion">Spirituality & Religion</option>
+							<option value="Miscellaneous & Fun">Miscellaneous & Fun</option>
+						</select>
+					</div>
+					<br />
+                    <div class="">
+						<p>Banner Image</p>
+						<input type="file" class="name" name="banner_image" required="required" style="width: 580px;height: 45px;"/>
+					</div>
+					<div class="">
+						<p>Resource Link</p>
+						<input type="url" class="name" name="resource_link" required="required" style="width: 580px;height: 45px;"/>
+					</div>
+					<br />
+					<input type="submit" value="Add Article">
+				</form>
+			</div>
+		</div>
+	</div>
+	{% include "footer.html" %}
+</body>
+</html>

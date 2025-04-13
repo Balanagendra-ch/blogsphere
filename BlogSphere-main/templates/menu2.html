@@ -1,0 +1,26 @@
+<!-- header -->
+<div class="header-top">
+	<div class="container">
+		<font color="white" size="5">BlogSphere</font>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<a href="/getarticles"><font color="white">Articles</font></a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+		{% if request.session.role in "user" %}
+			<a href="/postarticle"><font color="white">Post Article</font></a>
+		{% endif %}
+
+		<div class="bottom_header_right">
+			<div class="header-top-righ">
+				<a href="/logout"> <span class="fa fa-sign-out"
+					aria-hidden="true"></span>Logout
+				</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+<!-- banner -->
